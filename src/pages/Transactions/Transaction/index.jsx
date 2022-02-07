@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 function Transaction({_id, date, description, value, type, remove}){
 
     date = dayjs(date).format('DD/MM');
-    console.log(type);
 
     const formatedValue = value.toString().replace('.', ',');
 

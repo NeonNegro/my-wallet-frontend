@@ -1,6 +1,5 @@
 export function formatToReal(value ,set){
      value = value.replace(/\D/g, '');  // retira tudo que não for número
-     value = value.replace(',', '');    // retira a vírgula
      value = value.replace(/^0+/, '');  // retira zeros do começo
      if(value.length === 0)
         value = '0,00';
