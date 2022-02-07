@@ -42,7 +42,6 @@ function Transactions(){
             return p + tosum
         }, 0)
         setBalance(balance);
-        console.log(balance);
     }
 
     function deleteTransaction(id){

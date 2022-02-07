@@ -28,18 +28,22 @@ function Register(){
         setIsLoading(true);
 
         const form = {...formData};
-        delete form.confirmPassword;
+        if(form.confirmPassword === form.password){
+            delete form.confirmPassword;
 
-        api.signUp({...form})
-        .then(()=> {
-            setIsLoading(false);
-            navigate("/");
-        })
-        .catch((err)=>{
-            setIsLoading(false);
-            alert(`Erro ao Cadastrar`);
-            console.log(err.response);
-        });
+            api.signUp({...form})
+            .then(()=> {
+                setIsLoading(false);
+                navigate("/");
+            })
+            .catch((err)=>{
+                setIsLoading(false);
+                alert(`Erro ao Cadastrar`);
+                console.log(err.response);
+            });
+        } else {
+            alert('Senhas não condizem!');
+        }
     }
 
     return(
