@@ -43,6 +43,7 @@ function Register(){
             });
         } else {
             alert('Senhas não condizem!');
+            setIsLoading(false);
         }
     }
 
