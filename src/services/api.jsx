@@ -41,7 +41,7 @@ function createNewOutcome(body, token){
 }
 
 function deleteTransaction(id, token){
-    return axios.delete(`${BASE_URL}/cash/deleteTransaction`,id, config(token));
+    return axios.delete(`${BASE_URL}/cash/deleteTransaction/${id}`, config(token));
 }
 
 

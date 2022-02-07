@@ -48,7 +48,10 @@ function Transactions(){
     function deleteTransaction(id){
         api.deleteTransaction(id, auth.token)
         .then((response)=>{
-            console.log(response);
+            const newList = transactions.filter(t =>{
+                return t._id !== id;
+            });
+            setTransactions([...newList]);
         })
         .catch((err)=>{
             console.log(err);
@@ -60,15 +63,19 @@ function Transactions(){
         navigate("/");
     }
 
+    function hasTransactions(){
+        return transactions?.length;
+    }
+
     return (
         <Container>
             <Agregator>
-                <List hasList ={transactions?.length}>
-                    {(transactions) 
-                        ? transactions.map(t => <Transaction key = {t._id}{...t} remove={deleteTransaction}/>)                         
+                <List hasList ={() =>{hasTransactions()}}>
+                    {(hasTransactions()) 
+                        ? transactions.map(t => <Transaction key = {t._id}{...t} remove={deleteTransaction}/>)
                         : <Message>Não há registros de entrada ou saída</Message>
                     }
-                    {(transactions) && <Balance value={balance}></Balance>}
+                    {(hasTransactions()) ? <Balance value={balance}></Balance> : '' }
                 </List>
                 <Buttons>
                 <Button onClick={() =>{navigate('/novaEntrada')}}>

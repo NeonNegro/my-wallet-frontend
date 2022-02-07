@@ -42,7 +42,11 @@ const Descript = styled.span`
 `;
 
 const Delete = styled.button`
+    margin-right: 3px;
     color: #C6C6C6;
+    border: none;
+    background-color: white;
+    cursor: pointer;
 `
 
 export {

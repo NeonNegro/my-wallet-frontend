@@ -12,3 +12,10 @@ export function formatToReal(value ,set){
          value = value.substr(0,value.length-2) + ',' + value.substr(-2,2);
     set(value);
 }
+
+export function formatedValue(v){
+    let r = v.toString().replace('.', ',');
+    r += (!r.includes(',')) ? ',00' : '';
+    return r
+}
+    
