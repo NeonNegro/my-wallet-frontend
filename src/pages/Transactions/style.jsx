@@ -37,6 +37,14 @@ const Agregator = styled.div`
     max-width:800px;
 `
 
+const Message = styled.p`
+    color: #868686;
+    font-size: 20px;
+    margin: auto auto;
+    width: 195px;
+    text-align: center;
+`
+
 
 export {
     Button,
@@ -44,4 +52,5 @@ export {
     Text,
     Img,
     Agregator,
+    Message,
 }

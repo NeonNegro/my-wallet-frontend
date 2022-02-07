@@ -2,7 +2,6 @@ import { useContext } from "react";
 import AuthContext from "../../contexts/AuthContext";
 import { Container, Img, Title } from "./style";
 import exit from "../../assets/exit.svg";
-import { noHeader } from "../../Utils/utils";
 import { useLocation } from "react-router-dom";
 import api from "../../services/api";
 
@@ -26,7 +25,7 @@ function Header(){
     }
 
 
-    if(noHeader.includes(location.pathname)){
+    if(location.pathname === "/" || location.pathname === "/sign-up"){
         return null;
     }
 

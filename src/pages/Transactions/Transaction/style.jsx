@@ -9,20 +9,39 @@ function getColor(type){
 
 
 const Container = styled.div`
-    margin: 20px 0;
+    padding: 10px 0;
     width: 100%;
     display:flex;
     justify-content: space-between;
+
+    :first-of-type{
+        padding-top: 20px;
+    }
+    :last-of-type{
+        padding-bottom: 20px;
+    }
 `
 
 const Value = styled.span`
     margin-left: auto;
+    padding-left: 5px;
     margin-right: 10px;
     color: ${({type}) => getColor(type)};
+    max-width: 50%;
 `
 const Date = styled.span`
     margin-left: 12px;
     margin-right: 10px;
+    color: #C6C6C6;
+`
+const Descript = styled.span`
+    max-width: 70%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-grow: 1;
+`;
+
+const Delete = styled.button`
     color: #C6C6C6;
 `
 
@@ -30,4 +49,6 @@ export {
     Container,
     Value,
     Date,
+    Descript,
+    Delete,
 }

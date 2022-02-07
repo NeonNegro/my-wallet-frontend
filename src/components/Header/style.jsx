@@ -6,6 +6,7 @@ const margin = "25px";
 const Container = styled.div`
     width: 100vw;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     display: flex;

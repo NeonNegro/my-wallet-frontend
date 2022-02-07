@@ -8,20 +8,20 @@ import AuthContext from "../../contexts/AuthContext";
 import api from "../../services/api";
 import { formatToReal } from "../../Utils/utils";
 
-function CashIn(){
+function CashOut(){
     const { auth } = useContext(AuthContext);
     const navigate = useNavigate();
     const [value, setValue] = useState('');
     const [description, setDescription] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    function handleNewIncome(e){
+    function handleNewOutcome(e){
         e.preventDefault();
         setIsLoading(true);
 
         const formatedValue = value.replace(',', '.');
 
-        api.createNewIncome({value:formatedValue, description}, auth.token)
+        api.createNewOutcome({value:formatedValue, description}, auth.token)
         .then((data) =>{
             setIsLoading(false);
             navigate("/transacoes");
@@ -34,7 +34,7 @@ function CashIn(){
 
     return (
         <Container>
-            <Form onSubmit={handleNewIncome}>
+            <Form onSubmit={handleNewOutcome}>
                 <Input
                     placeholder="Valor"
                     required
@@ -55,4 +55,4 @@ function CashIn(){
 }
 
 
-export default CashIn;
+export default CashOut;

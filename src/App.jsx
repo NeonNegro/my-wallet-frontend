@@ -6,6 +6,7 @@ import Transactions from "./pages/Transactions/index.jsx"
 import CashIn from "./pages/CashIn";
 import { AuthProvider } from "./contexts/AuthContext";
 import Header from "./components/Header";
+import CashOut from "./pages/CashOut";
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
           <Route path="/sign-up" element={<Register />} />
           <Route path = "/transacoes" element= {<Transactions />} />
           <Route path="/novaEntrada" element={<CashIn />} />
-          {/* <Route path="/novaSaida" element= {<CashOut />} /> */}
+          <Route path="/novaSaida" element= {<CashOut />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
