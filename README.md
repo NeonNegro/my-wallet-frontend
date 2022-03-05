@@ -1,6 +1,6 @@
 # My Wallet
-An easy to use financial manager. Track your revenues and expenses to learn how you spend your money and know all the time how much you have.
-<p align="center">
+Keep track of your incomes and expenses with this simple to use personal financial recorder. Never be taken by surprise again, stay away from the red zone!
+<p align="center">.
   <img src="https://i.imgur.com/EShG2Ie.gif" />
 </p>
 
