@@ -1,10 +1,10 @@
 # My Wallet
 An easy to use financial manager. Track your revenues and expenses to learn how you spend your money and know all the time how much you have.
 <p align="center">
-  <img src="https://imgur.com/EShG2Ie" />
+  <img src="https://i.imgur.com/EShG2Ie.gif" />
 </p>
 
-Try it out now at https://my-wallet-eight.vercel.app/
+Try it out now at https://my-wallet-frontend-zeta.vercel.app/
 
 ## Technologies
 The following tools and frameworks were used in the construction of the project:<br>
